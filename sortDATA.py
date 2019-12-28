@@ -36,7 +36,7 @@ with open('birth_weight.csv', "a+", newline='') as f:
             if index == -1:
                 pass
             else:
-                
+
                 temp[index] = ivalue
         writer.writerow(temp)
     f.close()
