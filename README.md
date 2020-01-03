@@ -8,3 +8,13 @@ Using RRSI to predict location
 ### 2.`pip install cvs`
 
 ### 3.`pip install scipy`
+
+### 4.`pip install numpy`
+
+### 5.`pip install sklearn`
+
+### 6.`pip install opencv-python`
+
+# or just
+
+### `pip install -r requirment.txt`
