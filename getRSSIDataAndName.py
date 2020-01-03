@@ -2,9 +2,9 @@
 import os
 import pickle,collections
 import numpy as np
-FilePath = "RSSCOPY/"
-savedDataName = "predicerss.txt"
-savedLabelName = "prediceloc.txt"
+FilePath = "RSS数据/"
+savedDataName = "OFF_RSS.txt"
+savedLabelName = "OFF_LOC.txt"
 
 def ReadTxtName(rootdir):
     lines = []
@@ -40,8 +40,8 @@ def GetAPInfo(lists):
         else:
             dicts[i].append(j)
 
-    AP_label = dict(zip(tuple(AP_names), tuple(AP_rssis)))
-    return AP_label
+    #AP_label = dict(zip(tuple(AP_names), tuple(AP_rssis)))
+    return dicts
 
 def GetFileName(path):
     path_list=[]
@@ -68,6 +68,6 @@ if __name__ == '__main__':
         RSSI_lists = ReadTxtName(path_list)
         dicts  = GetAPInfo(RSSI_lists)
         AllAPdata.append(dicts)
-        #AllAPlabel.append([int(path_list.split('_')[1]),int(path_list.split('_')[2])])
+        AllAPlabel.append([int(path_list.split('_')[1]),int(path_list.split('_')[2])])
     SaveDataAsformat(savedDataName,AllAPdata)
-    #SaveDataAsformat(savedLabelName,np.array(AllAPlabel))
+    SaveDataAsformat(savedLabelName,np.array(AllAPlabel))
