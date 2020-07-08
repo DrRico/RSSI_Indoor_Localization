@@ -2,7 +2,7 @@
 import os
 import pickle
 import scipy.io as scio
-FilePath = "RSSI_DATA/"
+FilePath = "RSSI_DATAS/"
 savedDataName = "RSSI.mat"
 savedLabelName = "label.mat"
 

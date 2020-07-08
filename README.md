@@ -18,3 +18,7 @@ Using RRSI to predict location
 # or just
 
 ### `pip install -r requirment.txt`
+
+
+
+# 想要运行程序，main函数是`readcsv.py`
